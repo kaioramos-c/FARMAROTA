@@ -1,0 +1,229 @@
+.signup-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 50px 20px 70px;
+}
+
+.signup-intro {
+  margin-bottom: 30px;
+}
+
+.signup-intro h1 {
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--verde-escuro);
+}
+
+.signup-intro p {
+  margin: 0 0 10px;
+  max-width: 620px;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+.signup-intro .required-note {
+  font-size: 0.95rem;
+}
+
+/* Formulário */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin: 0;
+  padding: 24px 28px 28px;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(15, 92, 77, 0.06);
+}
+
+.form-group-soft {
+  background-color: var(--verde-claro);
+  box-shadow: none;
+}
+
+.form-group legend {
+  padding: 0 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+.group-note {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.form-group-soft .form-row .field {
+  margin-top: 0;
+}
+
+.field label {
+  font-weight: 500;
+}
+
+.field input {
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background-color: #fff;
+  color: var(--texto);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.field input::placeholder {
+  color: #7d8f8a;
+}
+
+.field input:hover {
+  border-color: var(--verde-escuro);
+}
+
+.field input:focus-visible {
+  border-color: var(--verde-escuro);
+  outline: 3px solid rgba(15, 92, 77, 0.25);
+}
+
+.field-hint {
+  color: var(--texto-suave);
+}
+
+/* Tipo de cadastro */
+.type-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.type-option {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.type-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.type-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 18px;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  background-color: #fff;
+  line-height: 1.4;
+  color: var(--texto-suave);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.type-card strong {
+  color: var(--texto);
+}
+
+.type-option:hover .type-card {
+  border-color: var(--verde-escuro);
+}
+
+.type-input:checked + .type-card {
+  border-color: var(--verde-escuro);
+  background-color: var(--verde-claro);
+  box-shadow: inset 0 0 0 1px var(--verde-escuro);
+}
+
+.type-input:focus-visible + .type-card {
+  outline: 3px solid var(--verde-escuro);
+  outline-offset: 3px;
+}
+
+/* Botão e links */
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.submit-button {
+  align-self: flex-start;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--verde-escuro);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: var(--verde-hover);
+}
+
+.demo-note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.form-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.form-links a {
+  color: var(--verde-escuro);
+  font-weight: 500;
+}
+
+.form-links a:hover {
+  color: var(--verde-hover);
+}
+
+/* Tablet e celular */
+@media (max-width: 900px) {
+  .header {
+    padding: 14px 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .about-link {
+    justify-self: center;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
