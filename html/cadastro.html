@@ -34,6 +34,7 @@
 
     <!-- Introdução -->
     <section class="signup-intro">
+
       <h1>Cadastre-se no FarmaRota</h1>
       <p>
         Crie sua conta para consultar medicamentos de uso contínuo disponibilizados
@@ -41,20 +42,25 @@
         representante de uma farmácia ou unidade de saúde.
       </p>
       <p class="required-note">Os campos marcados com <span aria-hidden="true">*</span> são obrigatórios.</p>
+
     </section>
 
     <!-- Formulário -->
-    <form class="signup-form" aria-label="Formulário de cadastro">
+    <form class="signup-form">
 
       <fieldset class="form-group">
+        
         <legend>Dados pessoais</legend>
 
         <div class="field">
+
           <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
           <input type="text" id="nome" name="nome" placeholder="Como você se chama?" autocomplete="name" required>
+
         </div>
 
         <div class="form-row">
+
           <div class="field">
             <label for="email">E-mail <span aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
@@ -63,14 +69,17 @@
           <div class="field">
             <label for="telefone">Telefone (opcional)</label>
             <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" autocomplete="tel">
+
           </div>
         </div>
       </fieldset>
 
       <fieldset class="form-group">
+
         <legend>Dados de acesso</legend>
 
         <div class="form-row">
+
           <div class="field">
             <label for="senha">Senha <span aria-hidden="true">*</span></label>
             <input type="password" id="senha" name="senha" minlength="8" autocomplete="new-password"
@@ -83,13 +92,16 @@
             <input type="password" id="confirmar-senha" name="confirmar-senha" minlength="8"
                    autocomplete="new-password" required>
           </div>
+
         </div>
       </fieldset>
 
       <fieldset class="form-group">
+
         <legend>Tipo de cadastro <span aria-hidden="true">*</span></legend>
 
         <div class="type-options">
+
           <label class="type-option">
             <input class="type-input" type="radio" name="tipo-cadastro" value="usuario" required checked>
             <span class="type-card">
@@ -105,10 +117,12 @@
               <span>Para quem poderá informar a disponibilidade de medicamentos.</span>
             </span>
           </label>
+
         </div>
       </fieldset>
 
-      <fieldset class="form-group form-group-soft">
+      <fieldset class="form-group form-group-soft" id="dados-estabelecimento" hidden>
+
         <legend>Dados do estabelecimento</legend>
         <p class="group-note">Preencha somente se você escolheu o cadastro de representante.</p>
 
@@ -126,7 +140,9 @@
       </fieldset>
 
       <!-- Ações -->
+
       <div class="form-actions">
+        
         <button class="submit-button" type="button">Criar conta</button>
         <p class="demo-note" role="note">
           Versão demonstrativa: este formulário ainda não envia nem armazena os dados informados.
@@ -141,5 +157,8 @@
     </form>
   </main>
 
+  <script src="../js/cadastro.js"></script>
+
+</body>
 </body>
 </html>
