@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar medicamentos | FarmaRota</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/consultar-medicamentos.css">
+
+  <script src="../js/consultar-medicamentos.js" defer></script>
+  
+</head>
+<body>
+
+  <!-- Cabeçalho (igual ao das outras páginas) -->
+  <header class="header">
+    <a class="site-logo" href="index.html" aria-label="FarmaRota - página inicial"></a>
+
+    <nav class="index-nav" aria-label="Navegação principal">
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="consultar-medicamentos.html" aria-current="page">Consultar medicamentos</a></li>
+      </ul>
+    </nav>
+
+    <a class="about-link" href="sobre.html">Sobre o projeto</a>
+  </header>
+
+  <main class="consulta-page">
+
+    <!-- Introdução -->
+    <section class="consulta-intro">
+      <h1>Consultar medicamentos</h1>
+      <p>
+        Pesquise medicamentos de uso contínuo disponibilizados gratuitamente pelo SUS
+        e pela Farmácia Popular e veja informações gerais sobre cada um.
+      </p>
+      <p>Digite o nome do medicamento na barra de pesquisa. Se preferir, use os filtros para refinar a busca.</p>
+      <p class="demo-note">
+        Esta página usa dados demonstrativos. Eles não representam informações oficiais
+        nem indicam disponibilidade em nenhuma farmácia ou unidade de saúde.
+      </p>
+    </section>
+
+    <!-- Pesquisa e filtros -->
+    <form class="search-panel" id="formulario-busca" role="search" aria-label="Pesquisar medicamentos">
+      <div class="search-field">
+        <label for="busca">Nome do medicamento</label>
+        <div class="search-box">
+          <input type="search" id="busca" name="busca" list="sugestoes-medicamentos"
+                 placeholder="Ex.: losartana, metformina" autocomplete="off">
+          <button class="search-clear" id="botao-limpar" type="button" hidden>Limpar</button>
+        </div>
+        <datalist id="sugestoes-medicamentos"></datalist>
+      </div>
+
+      <div class="filters">
+        <div class="filter-field">
+          <label for="filtro-programa">Programa</label>
+          <select id="filtro-programa" name="programa">
+            <option value="">Todos</option>
+            <option value="SUS">SUS</option>
+            <option value="Farmácia Popular">Farmácia Popular</option>
+          </select>
+        </div>
+
+        <div class="filter-field">
+          <label for="filtro-categoria">Categoria</label>
+          <select id="filtro-categoria" name="categoria">
+            <option value="">Todas</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <!-- Resultados -->
+    <section class="results" aria-labelledby="titulo-resultados">
+      <div class="results-header">
+        <h2 id="titulo-resultados">Resultados</h2>
+        <p class="results-count" id="contagem-resultados" aria-live="polite"></p>
+      </div>
+
+      <div class="state-message" id="mensagem-estado">
+        <p class="state-title" id="mensagem-titulo"></p>
+        <p id="mensagem-texto"></p>
+      </div>
+
+      <ul class="med-grid" id="lista-resultados"></ul>
+    </section>
+
+  </main>
+  
+  
+
+</body>
+</html>

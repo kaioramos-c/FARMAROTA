@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template
 
 from config import config_por_ambiente
-from extensions import db, migrate, login_manager, csrf
+from backend.extensions import db, migrate, login_manager, csrf
 
 
 def create_app(ambiente=None):
